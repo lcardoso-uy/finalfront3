@@ -7,6 +7,15 @@ import Footer from "./Components/Footer";
 import Layout from './Components/Layout';
 import { useState } from "react";
 
+import{
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link,
+  useParams,
+  useNavigate
+} from "react-router-dom";
+
 function App() {
 
   const [theme, setTheme] = useState(themes.light);
