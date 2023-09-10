@@ -30,7 +30,7 @@ const Navbar = () => {
               <Link to="/">Inicio</Link>
             </li>
             <li>
-              <Link to="/odontologos">Home</Link>
+              <Link to="/Home">Home</Link>
             </li>
             <li>
               <Link to="/contacto">Contacto</Link>
@@ -46,7 +46,7 @@ const Navbar = () => {
       </nav>
       <Routes>
             <Route path='/' element={<h2>Página de Inicio</h2>} />
-            <Route path='odontologos' element={<Home/>}/>
+            <Route path='Home' element={<Home/>}/>
             <Route path='contacto' element={<Contact/>}/>
             <Route path='favoritos' element={<Favs/>}/>
         </Routes>
