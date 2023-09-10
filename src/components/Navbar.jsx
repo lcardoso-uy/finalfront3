@@ -5,6 +5,7 @@ import ThemeContext from '../context';
 import Home from '../Routes/Home';
 import Contact from '../Routes/Contact';
 import Favs from '../Routes/Favs';
+import Detail from '../Routes/Detail';
 
 import {
   BrowserRouter as Router,
@@ -38,6 +39,9 @@ const Navbar = () => {
             <li>
               <Link to="/favoritos">Favoritos</Link>
             </li>
+            <li>
+              <Link to="/detail/:id">Detalle</Link>
+            </li>
           </ul>
 
         {/* Deberan implementar ademas la logica para cambiar de Theme con el button */}
@@ -47,6 +51,7 @@ const Navbar = () => {
       <Routes>
             <Route path='/' element={<h2>Página de Inicio</h2>} />
             <Route path='Home' element={<Home/>}/>
+            <Route path='detail/:id' element={<Detail/>}/>
             <Route path='contacto' element={<Contact/>}/>
             <Route path='favoritos' element={<Favs/>}/>
         </Routes>

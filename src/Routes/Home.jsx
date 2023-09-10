@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import Card from '../Components/Card'
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
+//TODO - Estilos
 
 const Home = () => {
 
@@ -19,7 +20,7 @@ const Home = () => {
         setLoading(false);
       })
       .catch((error) => {
-        //Renderizar error
+        //TODO Renderizar error
         console.error("Error al obtener respuesta api - ", error);
       });
   }, [])
@@ -28,7 +29,6 @@ const Home = () => {
     <main className="" >
       <h1>Home</h1>
       <div className='card-grid'>
-        {/* Aqui deberias renderizar las cards */}
         {loading ? (
           <p>Cargando...</p>
         ) : (
@@ -38,9 +38,6 @@ const Home = () => {
                 key={odontologo.id}
                 id={odontologo.id}
                 name={odontologo.name}
-                email={odontologo.email}
-                phone={odontologo.phone}
-                website={odontologo.website}
               />
             ))}
           </div>
