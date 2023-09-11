@@ -1,15 +1,18 @@
-import React from 'react'
-import { useState, useEffect } from 'react'
+import { Children } from 'react'
+import React, { useState, useEffect, useContext } from 'react';
 
-import Card from '../Components/Card'
+import ThemeContext from "../context";
 
-//Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
-//TODO - Estilos
+import Card from '../Components/Card';
+
 
 const Home = () => {
 
+  const { theme } = useContext(ThemeContext);
+
   const [odontologos, setOdontologos] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [errorMsg, setErrorMsg] = useState("");
 
   useEffect(() => {
 
@@ -20,21 +23,21 @@ const Home = () => {
         setLoading(false);
       })
       .catch((error) => {
-        //TODO Renderizar error
-        console.error("Error al obtener respuesta api - ", error);
+        setErrorMsg("Error al obtener respuesta api - " + error);
       });
   }, [])
 
   return (
-    <main className="" >
+    <main className="" style={{ background: theme.background, color: theme.font }}>
       <h1>Home</h1>
-      <div className='card-grid'>
         {loading ? (
           <p>Cargando...</p>
+        ) : errorMsg ? (
+          <p>{errorMsg}</p>
         ) : (
-          <div>
-            {odontologos.map(odontologo => (
-              <Card
+          <div className='card-grid'>
+          {odontologos.map(odontologo => (
+              <Card 
                 key={odontologo.id}
                 id={odontologo.id}
                 name={odontologo.name}
@@ -42,9 +45,8 @@ const Home = () => {
             ))}
           </div>
         )}
-      </div>
     </main>
   )
 }
 
-export default Home
+export default Home;

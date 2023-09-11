@@ -6,6 +6,7 @@ import Home from '../Routes/Home';
 import Contact from '../Routes/Contact';
 import Favs from '../Routes/Favs';
 import Detail from '../Routes/Detail';
+import NoPage from '../NoPage';
 
 import {
   BrowserRouter as Router,
@@ -24,12 +25,8 @@ const Navbar = () => {
 
   return (
     <Router>
-      <nav>
-        {/* Aqui deberan agregar los liks correspondientes a las rutas definidas */}
+      <nav >
         <ul>
-            <li>
-              <Link to="/">Inicio</Link>
-            </li>
             <li>
               <Link to="/Home">Home</Link>
             </li>
@@ -39,24 +36,21 @@ const Navbar = () => {
             <li>
               <Link to="/favoritos">Favoritos</Link>
             </li>
-            <li>
-              <Link to="/detail/:id">Detalle</Link>
-            </li>
           </ul>
 
-        {/* Deberan implementar ademas la logica para cambiar de Theme con el button */}
         <button onClick={handleChangeTheme}
           style={{ background: theme.background, color: theme.font }}>Change theme</button>
       </nav>
       <Routes>
             <Route path='/' element={<h2>Página de Inicio</h2>} />
-            <Route path='Home' element={<Home/>}/>
+            <Route path='/Home' element={<Home/>}/>
             <Route path='detail/:id' element={<Detail/>}/>
             <Route path='contacto' element={<Contact/>}/>
             <Route path='favoritos' element={<Favs/>}/>
+            <Route path='*' element={<NoPage/>}/>
         </Routes>
     </Router>
   )
 }
 
-export default Navbar
+export default Navbar;

@@ -1,8 +1,8 @@
 import React from "react";
-import Detail from "../Routes/Detail";
 import { Link } from "react-router-dom";
-import doctor from "/images/doctor.jpg";
 
+import doctor from "/images/doctor.jpg";
+import Detail from "../Routes/Detail";
 
 const Card = ({ id, name }) => {
 

@@ -1,11 +1,11 @@
-import ThemeContext, {themes} from './context';
-
 import React from 'react';
+import { useState } from "react";
+
+import ThemeContext, {themes} from './context';
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
-
 import Layout from './Components/Layout';
-import { useState } from "react";
+
 
 import{
   BrowserRouter as Router,
