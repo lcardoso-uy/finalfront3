@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer>
         <p>Powered by</p>
-        <img src="./images/DH.png" alt='DH-logo' />
+        <img src="./images/Logo.png" alt='Logo' />
     </footer>
   )
 }
