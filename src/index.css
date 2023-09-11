@@ -30,6 +30,16 @@ nav{
   padding: 1rem;
 }
 
+nav ul {
+  list-style-type: none;
+  padding: 1em;
+  margin: 0;
+}
+
+nav li {
+  display: inline-block;
+}
+
 a{
   color: #000;
   text-decoration: none;
