@@ -26,8 +26,8 @@ const Detail = () => {
   }, [params])
 
   return (
-    <div style={{ background: theme.background, color: theme.font }} >
-      <h1>Detail Dentist id </h1>
+    <div style={{ background: theme.background, color: theme.font }} className = 'center'>
+      <h1>Dentist Detail Info </h1>
         <img className="doctor" src={doctor} alt="Dentist photograph"  />
         <p>Nº: {dentista.id}</p>
         <p>Name: {dentista.name}</p>
