@@ -23,30 +23,33 @@ const Navbar = () => {
 
   return (
     <Router>
-      <nav >
-        <ul>
+      <div className='header'>
+        <h1>Dental PRO</h1>
+        <nav >
+          <ul>
             <li>
               <Link to="/Home">Home</Link>
             </li>
             <li>
-              <Link to="/contacto">Contacto</Link>
+              <Link to="/contacto">Contact</Link>
             </li>
             <li>
-              <Link to="/favoritos">Favoritos</Link>
+              <Link to="/favoritos">Favs</Link>
             </li>
           </ul>
 
-        <button onClick={handleChangeTheme}
-          style={{ background: theme.background, color: theme.font }}>Change theme</button>
-      </nav>
+          <button onClick={handleChangeTheme}
+            style={{ background: theme.background, color: theme.font }}>Change theme</button>
+        </nav>
+      </div>
       <Routes>
-            <Route path='/' element={<h2>Página de Inicio</h2>} />
-            <Route path='/Home' element={<Home/>}/>
-            <Route path='detail/:id' element={<Detail/>}/>
-            <Route path='contacto' element={<Contact/>}/>
-            <Route path='favoritos' element={<Favs/>}/>
-            <Route path='*' element={<NoPage/>}/>
-        </Routes>
+        <Route path='/' element={<h2>Página de Inicio</h2>} />
+        <Route path='/Home' element={<Home />} />
+        <Route path='detail/:id' element={<Detail />} />
+        <Route path='contacto' element={<Contact />} />
+        <Route path='favoritos' element={<Favs />} />
+        <Route path='*' element={<NoPage />} />
+      </Routes>
     </Router>
   )
 }

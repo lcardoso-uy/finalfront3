@@ -12,21 +12,41 @@ code {
     monospace;
 }
 
+.header{
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  padding: 2rem;
+  position: relative;
+  bottom: 0;
+  width: 90vw;
+  height: 80px;
+  margin-top: 1rem;
+  margin-left: 3rem;
+}
+
+
 .favButton{
   background-color: rgba(136, 136, 136, 0.116);
   padding: 10px;
   border: none;
   width: 100%;
   cursor: pointer;
+  margin-bottom: 0.5rem;
+}
+
+button{
+  border-radius: 10px;
 }
 
 h1{
   text-align: center;
+  margin-bottom: 4rem;
 }
 
 nav{
   display: flex;
-  width: 80vw;
+  width: auto;
   justify-content: flex-start;
   padding: 1rem;
 }
@@ -64,7 +84,7 @@ footer {
 }
 
 footer > img{
-  width: 200px;
+  width: 150px;
   margin: 0;
 }
 footer > p{
@@ -89,6 +109,7 @@ form{
   width: 200px;
   padding: 0.5rem 0.5rem 0 0.5rem;
   border: 0.5px solid rgb(136, 136, 136);
+  border-radius: 15px;
 }
 
 .card:hover{
@@ -97,7 +118,7 @@ form{
 
 .card-grid{
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   gap: 1rem;
   width: 90vw;
   height: auto;
@@ -132,8 +153,11 @@ tr:nth-child(even) {
   color: white;
 }
 
-
 .doctor{
-  width: 80px;
-  margin-right: 2rem;
+  width: 200px;
+  border-radius: 15px;
+}
+
+.center{
+  text-align: center;
 }

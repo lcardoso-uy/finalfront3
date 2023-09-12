@@ -28,8 +28,6 @@ const Detail = () => {
   return (
     <div style={{ background: theme.background, color: theme.font }} >
       <h1>Detail Dentist id </h1>
-      {/* aqui deberan renderizar la informacion en detalle de un user en especifico */}
-      {/* Deberan mostrar el name - email - phone - website por cada user en especifico */}
         <img className="doctor" src={doctor} alt="Dentist photograph"  />
         <p>Nº: {dentista.id}</p>
         <p>Name: {dentista.name}</p>

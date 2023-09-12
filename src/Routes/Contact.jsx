@@ -15,8 +15,9 @@ const Contact = () => {
 
   return (
     <div style={{ background: theme.background, color: theme.font }}>
-      <h2>Want to know more?</h2>
-      <p>Send us your questions and we will contact you</p>
+      <h1>Contact me</h1>
+      <h2 className='center'>Want to know more?</h2>
+      <p className='center'>Send us your questions and we will contact you</p>
       <Form onAddUsuario={addUsuario}/>    
       <div>{usuario.resultado}</div>
     </div>
@@ -24,7 +25,3 @@ const Contact = () => {
 }
 
 export default Contact;
-
-/*○ Una vez enviado el formulario, deberán mostrar un mensaje de éxito que
-contenga el siguiente formato: “Gracias [nombre del usuario], te
-contactaremos cuando antes vía mail”.*/

@@ -34,18 +34,12 @@ const Form = ({ onAddUsuario }) => {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <input type="text" placeholder="Ingrese su nombre " value={nombre} onChange={(e) => setNombre(e.target.value)} />
-        <input type="text" placeholder="Ingrese el email " value={email} onChange={(e) => setEmail(e.target.value)} />
-        <button type="submit">Registrar</button>
+        <input type="text" placeholder="Name " value={nombre} onChange={(e) => setNombre(e.target.value)} />
+        <input type="text" placeholder="e-mail " value={email} onChange={(e) => setEmail(e.target.value)} />
+        <button type="submit">Register</button>
       </form>
     </div>
   );
 };
 
 export default Form;
-
-
-/*Nombre completo (con longitud mayor a 5).
-■ Email (con formato correcto de email).
-○ En caso de haber un error, mostrar el siguiente mensaje de error: “Por favor
-verifique su información nuevamente”.*/
