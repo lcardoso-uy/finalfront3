@@ -6,6 +6,11 @@ import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 import Layout from './Components/Layout';
 
+import Home from './Routes/Home';
+import Detail from './Routes/Detail';
+import Contact from './Routes/Contact';
+import Favs from './Routes/Favs';
+import NoPage from './NoPage';
 
 import {
   BrowserRouter as Router,
@@ -24,25 +29,25 @@ function App() {
     theme === themes.dark ? setTheme(themes.light) : setTheme(themes.dark);
   };
 
-  return (
-    <Router>
-      <div className="App">
-        <ThemeContext.Provider value={{ theme, handleChangeTheme }}>
+  return (    
+    <ThemeContext.Provider value={{ theme, handleChangeTheme }}>
+      <Router>
+        <div className="App">
           <Layout>
             <Navbar />
-            <Footer />
           </Layout>
-        </ThemeContext.Provider>
-      </div>
-      <Routes>
-        <Route path='/' element={<h2>Página de Inicio</h2>} />
-        <Route path='/Home' element={<Home />} />
-        <Route path='detail/:id' element={<Detail />} />
-        <Route path='contacto' element={<Contact />} />
-        <Route path='favoritos' element={<Favs />} />
-        <Route path='*' element={<NoPage />} />
-      </Routes>
-    </Router>
+          <Routes>
+            <Route path='/' element={<h2>Página de Inicio</h2>} />
+            <Route path='/Home' element={<Home />} />
+            <Route path='detail/:id' element={<Detail />} />
+            <Route path='contacto' element={<Contact />} />
+            <Route path='favoritos' element={<Favs />} />
+            <Route path='*' element={<NoPage />} />
+          </Routes>
+          <Footer />
+        </div>
+      </Router>
+    </ThemeContext.Provider>
   );
 }
 
