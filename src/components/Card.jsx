@@ -1,13 +1,21 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 
 import doctor from "/images/doctor.jpg";
 import Detail from "../Routes/Detail";
+import { FavoritesContext } from "../context";
 
-const Card = ({ id, name }) => {
+const Card = ({ id, name, isFavorite }) => {
+
+  const { dispatch } = useContext(FavoritesContext);
 
   const addFav = ()=>{
     // Aqui iria la logica para agregar la Card en el localStorage
+    if (isFavorite) {
+      dispatch({ type: 'REMOVE_FAVORITE', payload: id });
+    } else {
+      dispatch({ type: 'ADD_FAVORITE', payload: id });
+    }
   }
 
   return (
@@ -21,7 +29,7 @@ const Card = ({ id, name }) => {
         <Link to={`/detail/${id}`}>Detalle</Link>
 
         {/* Ademas deberan integrar la logica para guardar cada Card en el localStorage */}
-        <button onClick={addFav} className="favButton">Add fav</button>
+        <button onClick={addFav} className="favButton">{isFavorite ? 'Remove fav' : 'Add fav'}</button>
     </div>
   );
 };

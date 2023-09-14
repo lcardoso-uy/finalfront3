@@ -2,6 +2,7 @@ import { Children } from 'react'
 import React, { useState, useEffect, useContext } from 'react';
 
 import ThemeContext from "../context";
+import { FavoritesContext } from '../context';
 
 import Card from '../Components/Card';
 
@@ -9,6 +10,7 @@ import Card from '../Components/Card';
 const Home = () => {
 
   const { theme } = useContext(ThemeContext);
+  const { state, dispatch } = useContext(FavoritesContext);
 
   const [odontologos, setOdontologos] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -41,6 +43,7 @@ const Home = () => {
                 key={odontologo.id}
                 id={odontologo.id}
                 name={odontologo.name}
+                isFavorite={state.favorites.includes(odontologo.id)}
               />
             ))}
           </div>
