@@ -34,12 +34,12 @@ function App() {
     <ThemeContext.Provider value={{ theme, handleChangeTheme }}>
       <FavoritesProvider>
         <Router>
-          <div className="App">
+          <div className="App" style={{ background: theme.background, color: theme.font }}>
             <Layout>
               <Navbar />
             </Layout>
             <Routes>
-              <Route path='/' element={<h2 className='center'>Página de Inicio</h2>} />
+              <Route path='/' element={<h2 className='center'>First page</h2>} />
               <Route path='/Home' element={<Home />} />
               <Route path='detail/:id' element={<Detail />} />
               <Route path='contacto' element={<Contact />} />

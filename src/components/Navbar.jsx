@@ -28,13 +28,13 @@ const Navbar = () => {
       <nav >
         <ul>
           <li>
-            <Link to="/Home">Home</Link>
+            <Link to="/Home" style={{ background: theme.background, color: theme.font }}>Home</Link>
           </li>
           <li>
-            <Link to="/contacto">Contact</Link>
+            <Link to="/contacto" style={{ background: theme.background, color: theme.font }}>Contact</Link>
           </li>
           <li>
-            <Link to="/favoritos">Favs</Link>
+            <Link to="/favoritos" style={{ background: theme.background, color: theme.font }}>Favs</Link>
           </li>
         </ul>
 

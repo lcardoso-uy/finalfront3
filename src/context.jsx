@@ -8,7 +8,6 @@ export const themes = {
     dark: {
         font: "white",
         background: "black"
-
     }
 }
 
@@ -26,6 +25,7 @@ const favoritesReducer = (state, action) => {
             return state;
     }
 };
+
 
 export const FavoritesContext = createContext();
 

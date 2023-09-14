@@ -9,9 +9,6 @@ const Detail = () => {
 
   const { theme } = useContext(ThemeContext);
 
-  // Consumiendo el parametro dinamico de la URL deberan hacer un fetch a un user en especifico
-  //https://jsonplaceholder.typicode.com/users
-
   const [dentista, setDentista] = useState({})
   const params = useParams()
 
@@ -33,9 +30,9 @@ const Detail = () => {
         <p>Name: {dentista.name}</p>
         <p>E-mail: {dentista.email}</p>
         <p>Phone: {dentista.phone}</p>
-        <p>Website: {dentista.website}</p>        
+        <p>Website: <a href={`http://${dentista.website}`} target="_blank" rel="noopener noreferrer">{dentista.website}</a></p>
     </div>
   )
 }
 
-export default Detail
+export default Detail;

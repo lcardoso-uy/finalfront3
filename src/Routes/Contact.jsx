@@ -10,16 +10,28 @@ const Contact = () => {
   const [usuario, setUsuario] = useState({});
 
   const addUsuario = (nombre, email, estadoValidacion, resultado) => {
-    setUsuario({nombre, email, estadoValidacion, resultado})
+    setUsuario({ nombre, email, estadoValidacion, resultado })
   }
 
+  const getValidationClass = (estadoValidacion) => {
+    switch (estadoValidacion) {
+      case 'S':
+        return 'showsuccess';
+      case 'N':
+        return 'showerror';
+      default:
+        return '';  // Caso default sin ninguna clase.
+    }
+  };
   return (
-    <div style={{ background: theme.background, color: theme.font }}>
+    <div style={{ background: theme.background, color: theme.font }} >
       <h1>Contact me</h1>
       <h2 className='center'>Want to know more?</h2>
       <p className='center'>Send us your questions and we will contact you</p>
-      <Form onAddUsuario={addUsuario}/>    
-      <div>{usuario.resultado}</div>
+      <Form onAddUsuario={addUsuario} />
+      <div className={`center ${getValidationClass(usuario.estadoValidacion)}`}>
+        {usuario.resultado}
+      </div>
     </div>
   )
 }

@@ -86,6 +86,7 @@ footer > img{
   width: 150px;
   margin: 0;
 }
+
 footer > p{
   margin: 0;
   padding-top: 0.7rem;
@@ -161,3 +162,25 @@ tr:nth-child(even) {
   text-align: center;
 }
 
+.showerror{
+  background-color:rgb(228, 102, 127);
+  margin: 10px;  
+  padding: 5px;
+  text-align: center;
+}
+
+.showsuccess{
+  background-color:rgb(133, 202, 133);
+  margin: 10px;  
+  text-align: center;
+  padding: 5px;
+}
+
+.moreinfo{
+  background-color:rgb(136, 202, 204);
+  margin: 10px;  
+  text-align: center;
+  padding: 5px 50px;
+  border-radius: 15px;
+
+}

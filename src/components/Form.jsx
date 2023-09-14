@@ -22,7 +22,7 @@ const Form = ({ onAddUsuario }) => {
     const esValido = validarNombre(nombre) && validarEmail(email);
     const estadoValidacion = esValido ? "S" : "N";
 
-    const resultado = estadoValidacion === "S" ? `Gracias ${nombre}, te contactaremos cuanto antes vía mail` : "Por favor verifique su información nuevamente";
+    const resultado = estadoValidacion === "S" ? `Thank you ${nombre}. We will contact you as soon as possible by email` : 'Please review your information';
 
     onAddUsuario(nombre, email, estadoValidacion, resultado);
 

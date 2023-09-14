@@ -1,7 +1,7 @@
 function NoPage(){
 
     return(
-        <p>página no encontrada</p>
+        <p className="center">Page not found</p>
     )
 }
 
