@@ -2,12 +2,6 @@ import React from 'react';
 import { useContext } from "react";
 import ThemeContext from '../context';
 
-import Home from '../Routes/Home';
-import Contact from '../Routes/Contact';
-import Favs from '../Routes/Favs';
-import Detail from '../Routes/Detail';
-import NoPage from '../NoPage';
-
 import {
   BrowserRouter as Router,
   Routes,
@@ -37,7 +31,6 @@ const Navbar = () => {
             <Link to="/favoritos" style={{ background: theme.background, color: theme.font }}>Favs</Link>
           </li>
         </ul>
-
         <button onClick={handleChangeTheme}
           style={{ background: theme.background, color: theme.font }}>Change theme</button>
       </nav>

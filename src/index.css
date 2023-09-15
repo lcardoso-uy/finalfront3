@@ -184,3 +184,10 @@ tr:nth-child(even) {
   border-radius: 15px;
 
 }
+
+.firstpage{
+  text-align: center;
+  vertical-align: middle;
+  font-size: 5em;
+  padding: 10%;
+}

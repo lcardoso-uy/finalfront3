@@ -39,7 +39,7 @@ function App() {
               <Navbar />
             </Layout>
             <Routes>
-              <Route path='/' element={<h2 className='center'>First page</h2>} />
+              <Route path='/' element={<h2 className='firstpage'>Welcome!</h2>} />
               <Route path='/Home' element={<Home />} />
               <Route path='detail/:id' element={<Detail />} />
               <Route path='contacto' element={<Contact />} />

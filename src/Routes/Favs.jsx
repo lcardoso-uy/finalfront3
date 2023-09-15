@@ -4,7 +4,7 @@ import { useContext, useState, useEffect } from "react";
 import ThemeContext from "../context";
 import { FavoritesContext } from '../context';
 
-import Card from "../Components/Card";
+import Card from "../components/Card";
 
 const Favs = () => {
 
