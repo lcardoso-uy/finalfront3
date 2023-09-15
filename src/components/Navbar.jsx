@@ -2,13 +2,8 @@ import React from 'react';
 import { useContext } from "react";
 import ThemeContext from '../context';
 
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Link,
-  useParams,
-  useNavigate
+import {  
+  Link  
 } from "react-router-dom";
 
 const Navbar = () => {

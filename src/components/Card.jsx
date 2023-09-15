@@ -21,17 +21,15 @@ const Card = ({ id, name, isFavorite }) => {
   const { theme, handleChangeTheme } = useContext(ThemeContext);
   
   return (
-    <div className="card">
-        {/* En cada card deberan mostrar en name - username y el id */}
-        <Link to={`/detail/${id}`} >
+    <div className="card">        
+        <Link to={`/detail/${id}`} >          
         <img className="doctor" src={doctor} alt="Dentist photograph"  />
         <p className="center" style={{ background: theme.background, color: theme.font }}>Nº: {id}</p>
         <p className="center" style={{ background: theme.background, color: theme.font }}>Name: {name}</p>
         </Link>
-        {/* No debes olvidar que la Card a su vez servira como Link hacia la pagina de detalle */}
+        
         <Link to={`/detail/${id}`} className="moreinfo">More info</Link>
-
-        {/* Ademas deberan integrar la logica para guardar cada Card en el localStorage */}
+        
         <button onClick={addFav} className="favButton" style={{ background: theme.background, color: theme.font }}>{isFavorite ? 'Remove fav' : 'Add fav'}</button>
     </div>
   );

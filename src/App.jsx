@@ -16,11 +16,8 @@ import NoPage from './NoPage';
 import {
   BrowserRouter as Router,
   Routes,
-  Route,
-  Link,
-  useParams,
-  useNavigate
-} from "react-router-dom";
+  Route} 
+from "react-router-dom";
 
 function App() {
 
